@@ -1,0 +1,168 @@
+/* ===================================================
+   Ruhrpott Brick Store - Landingpage
+   Version 2.0
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#1b1b1b;
+    color:#ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ===================================================
+   Banner
+=================================================== */
+
+.hero-banner{
+    padding:12px;
+}
+
+.bannerbild{
+    display:block;
+    width:80%;
+    max-width:900px;
+    height:auto;
+    margin:0 auto;
+    border:3px solid #f58220;
+    border-radius:14px;
+    box-shadow:0 15px 40px rgba(0,0,0,.45);
+}
+
+/* ===================================================
+   Buttons
+=================================================== */
+
+main{
+    max-width:900px;
+    margin:20px auto 40px;
+    padding:0 20px;
+}
+
+.shopbuttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.button-ebay,
+.button-brickowl{
+
+    flex:1;
+    min-width:280px;
+    max-width:340px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+    padding:18px 24px;
+
+    background:#2a2a2a;
+
+    color:#ffffff;
+
+    border:2px solid #f58220;
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-size:22px;
+    font-weight:bold;
+
+    transition:all .25s ease;
+}
+
+.button-ebay::before{
+    content:"🛒";
+    font-size:24px;
+}
+
+.button-brickowl::before{
+    content:"🧱";
+    font-size:22px;
+}
+
+.button-ebay:hover,
+.button-brickowl:hover{
+
+    background:#f58220;
+
+    color:#ffffff;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 30px rgba(245,130,32,.35);
+}
+
+/* ===================================================
+   Footer
+=================================================== */
+
+footer{
+
+    margin-top:45px;
+
+    padding:22px;
+
+    background:#111;
+
+    border-top:3px solid #f58220;
+
+    text-align:center;
+
+    color:#999;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+footer a{
+
+    color:#e5e5e5;
+
+    text-decoration:none;
+
+    transition:.2s;
+}
+
+footer a:hover{
+
+    color:#f58220;
+
+}
+
+/* ===================================================
+   Smartphone
+=================================================== */
+
+@media (max-width:900px){
+
+    .hero-banner{
+        padding:8px;
+    }
+
+    .shopbuttons{
+        flex-direction:column;
+    }
+
+    .button-ebay,
+    .button-brickowl{
+
+        width:100%;
+        max-width:420px;
+
+        font-size:20px;
+
+    }
+
+}
