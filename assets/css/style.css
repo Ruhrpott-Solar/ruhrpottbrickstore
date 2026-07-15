@@ -1,6 +1,6 @@
 /* ===================================================
    Ruhrpott Brick Store - Landingpage
-   Version 2.1
+   Version 3.0
 =================================================== */
 
 *{
@@ -35,7 +35,7 @@ body{
 }
 
 /* ===================================================
-   Buttons
+   Inhalt
 =================================================== */
 
 main{
@@ -43,6 +43,10 @@ main{
     margin:20px auto 40px;
     padding:0 20px;
 }
+
+/* ===================================================
+   Shopbuttons
+=================================================== */
 
 .shopbuttons{
     display:flex;
@@ -62,7 +66,6 @@ main{
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:10px;
 
     padding:18px 24px;
 
@@ -78,17 +81,17 @@ main{
     font-size:22px;
     font-weight:bold;
 
-    transition:all .25s ease;
+    transition:.25s;
 }
 
 .button-ebay::before{
     content:"🛒";
-    font-size:24px;
+    margin-right:10px;
 }
 
 .button-brickowl::before{
     content:"🧱";
-    font-size:22px;
+    margin-right:10px;
 }
 
 .button-ebay:hover,
@@ -96,11 +99,10 @@ main{
 
     background:#f58220;
 
-    color:#ffffff;
-
     transform:translateY(-4px);
 
     box-shadow:0 10px 30px rgba(245,130,32,.35);
+
 }
 
 /* ===================================================
@@ -109,43 +111,28 @@ main{
 
 .kontakt{
 
-    margin:50px auto 20px;
+    display:flex;
 
-    max-width:700px;
+    justify-content:center;
 
-    padding:30px;
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin:35px 0 10px;
+
+}
+
+.kontakt-button,
+.kontakt-ort{
 
     background:#2a2a2a;
 
-    border:2px solid #f58220;
+    border:2px solid #555;
 
-    border-radius:12px;
-
-    text-align:center;
-
-}
-
-.kontakt h2{
-
-    margin-bottom:25px;
-
-    color:#f58220;
-
-    font-size:30px;
-
-}
-
-.kontakt p{
-
-    margin:18px 0;
-
-    font-size:20px;
-
-    line-height:1.6;
-
-}
-
-.kontakt a{
+    border-radius:10px;
 
     color:#ffffff;
 
@@ -153,13 +140,45 @@ main{
 
     font-weight:bold;
 
-    transition:.2s;
+    padding:14px 24px;
+
+    min-width:200px;
+
+    text-align:center;
+
+    transition:.25s;
 
 }
 
-.kontakt a:hover{
+.whatsapp{
 
-    color:#f58220;
+    border-color:#25D366;
+
+}
+
+.whatsapp:hover{
+
+    background:#25D366;
+
+    color:#ffffff;
+
+}
+
+.email{
+
+    border-color:#f58220;
+
+}
+
+.email:hover{
+
+    background:#f58220;
+
+}
+
+.kontakt-ort{
+
+    border-color:#666;
 
 }
 
@@ -180,19 +199,21 @@ footer{
     text-align:center;
 
     color:#999;
+
 }
 
 footer p{
+
     margin:8px 0;
+
 }
 
 footer a{
 
-    color:#e5e5e5;
+    color:#ffffff;
 
     text-decoration:none;
 
-    transition:.2s;
 }
 
 footer a:hover{
@@ -207,41 +228,33 @@ footer a:hover{
 
 @media (max-width:900px){
 
-    .hero-banner{
-        padding:8px;
-    }
-
     .shopbuttons{
+
         flex-direction:column;
+
     }
 
     .button-ebay,
     .button-brickowl{
 
         width:100%;
-        max-width:420px;
 
-        font-size:20px;
+        max-width:420px;
 
     }
 
     .kontakt{
 
-        margin-top:35px;
-
-        padding:20px;
+        flex-direction:column;
 
     }
 
-    .kontakt h2{
+    .kontakt-button,
+    .kontakt-ort{
 
-        font-size:26px;
+        width:100%;
 
-    }
-
-    .kontakt p{
-
-        font-size:18px;
+        max-width:420px;
 
     }
 
