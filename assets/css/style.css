@@ -1,6 +1,6 @@
 /* ===================================================
    Ruhrpott Brick Store - Landingpage
-   Version 6.0
+   Version 7.0
 =================================================== */
 
 *{
@@ -20,20 +20,25 @@ body{
 =================================================== */
 
 .hero-banner{
-    padding:12px;
+    padding:15px;
 }
 
 .bannerbild{
+
     display:block;
+
     width:85%;
     max-width:980px;
+
     margin:0 auto;
+
     height:auto;
 
     border:3px solid #f58220;
-    border-radius:14px;
+    border-radius:15px;
 
     box-shadow:0 18px 45px rgba(0,0,0,.45);
+
 }
 
 /* ===================================================
@@ -44,14 +49,14 @@ main{
 
     max-width:980px;
 
-    margin:18px auto 40px;
+    margin:20px auto 45px;
 
     padding:0 20px;
 
 }
 
 /* ===================================================
-   Buttonreihen
+   Shop + Kontakt
 =================================================== */
 
 .shopbuttons,
@@ -63,7 +68,7 @@ main{
 
     align-items:center;
 
-    gap:28px;
+    gap:25px;
 
     flex-wrap:wrap;
 
@@ -71,7 +76,7 @@ main{
 
 .kontakt{
 
-    margin-top:18px;
+    margin-top:20px;
 
 }
 
@@ -86,31 +91,28 @@ main{
     flex:1;
 
     min-width:300px;
-
     max-width:360px;
 
-    height:76px;
+    height:74px;
 
     display:flex;
 
     justify-content:center;
-
     align-items:center;
+
+    border-radius:14px;
 
     text-decoration:none;
 
-    font-size:18px;
-
-    font-weight:700;
-
-    border-radius:14px;
+    font-size:22px;
+    font-weight:bold;
 
     transition:all .25s ease;
 
 }
 
 /* ===================================================
-   Shopbuttons
+   eBay + BrickOwl
 =================================================== */
 
 .button-ebay,
@@ -145,9 +147,9 @@ main{
 
     background:#25D366;
 
-    border:2px solid #25D366;
-
     color:#ffffff;
+
+    border:2px solid #25D366;
 
 }
 
@@ -171,9 +173,9 @@ main{
 
     background:#f58220;
 
-    border:2px solid #f58220;
-
     color:#ffffff;
+
+    border:2px solid #f58220;
 
 }
 
@@ -211,7 +213,19 @@ footer{
 
 footer p{
 
-    margin:8px 0;
+    margin-bottom:10px;
+
+}
+
+footer nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
 
 }
 
@@ -220,6 +234,8 @@ footer a{
     color:#ffffff;
 
     text-decoration:none;
+
+    transition:.2s;
 
 }
 
@@ -237,7 +253,7 @@ footer a:hover{
 
     .bannerbild{
 
-        width:95%;
+        width:96%;
 
     }
 
@@ -255,10 +271,12 @@ footer a:hover{
     .kontakt-button{
 
         width:100%;
-
         max-width:430px;
-
         min-width:unset;
+
+        height:70px;
+
+        font-size:20px;
 
     }
 
