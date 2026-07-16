@@ -1,6 +1,6 @@
 /* ===================================================
    Ruhrpott Brick Store - Landingpage
-   Version 4.0
+   Version 4.1
 =================================================== */
 
 *{
@@ -49,11 +49,13 @@ main{
 =================================================== */
 
 .shopbuttons{
+
     display:flex;
     justify-content:center;
     align-items:center;
     gap:25px;
     flex-wrap:wrap;
+
 }
 
 .button-ebay,
@@ -82,13 +84,13 @@ main{
     font-weight:bold;
 
     transition:all .25s ease;
+
 }
 
 .button-ebay:hover,
 .button-brickowl:hover{
 
     background:#f58220;
-
     color:#ffffff;
 
     transform:translateY(-4px);
@@ -104,30 +106,26 @@ main{
 .kontakt{
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     gap:25px;
+    flex-wrap:wrap;
 
     margin:35px auto 10px;
-
-    flex-wrap:wrap;
 
 }
 
 .kontakt-button{
 
-    width:260px;
+    flex:1;
+    min-width:280px;
+    max-width:340px;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
-    padding:16px 24px;
+    padding:18px 24px;
 
     border-radius:12px;
 
@@ -135,45 +133,50 @@ main{
 
     color:#ffffff;
 
-    font-size:21px;
-
+    font-size:22px;
     font-weight:bold;
-
-    background:#2a2a2a;
 
     transition:all .25s ease;
 
 }
 
+/* WhatsApp */
+
 .whatsapp{
 
+    background:#25D366;
     border:2px solid #25D366;
 
 }
 
 .whatsapp:hover{
 
-    background:#25D366;
+    background:#1EBE5D;
+    border-color:#1EBE5D;
 
-    color:#ffffff;
+    transform:translateY(-4px);
 
-    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(37,211,102,.40);
 
 }
 
+/* E-Mail */
+
 .email{
 
+    background:#f58220;
     border:2px solid #f58220;
 
 }
 
 .email:hover{
 
-    background:#f58220;
+    background:#d96f15;
+    border-color:#d96f15;
 
-    color:#ffffff;
+    transform:translateY(-4px);
 
-    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(245,130,32,.40);
 
 }
 
@@ -236,10 +239,10 @@ footer a:hover{
     }
 
     .button-ebay,
-    .button-brickowl{
+    .button-brickowl,
+    .kontakt-button{
 
         width:100%;
-
         max-width:420px;
 
     }
@@ -249,14 +252,6 @@ footer a:hover{
         flex-direction:column;
 
         gap:15px;
-
-    }
-
-    .kontakt-button{
-
-        width:100%;
-
-        max-width:420px;
 
     }
 
