@@ -1,6 +1,6 @@
 /* ===================================================
    Ruhrpott Brick Store - Landingpage
-   Version 5.0
+   Version 5.1
 =================================================== */
 
 *{
@@ -27,8 +27,8 @@ body{
     display:block;
     width:80%;
     max-width:900px;
-    margin:0 auto;
     height:auto;
+    margin:0 auto;
 
     border:3px solid #f58220;
     border-radius:14px;
@@ -41,80 +41,50 @@ body{
 =================================================== */
 
 main{
-
     max-width:900px;
-
     margin:20px auto 40px;
-
     padding:0 20px;
-
-}
-
-/* ===================================================
-   Alle Buttons
-=================================================== */
-
-.shopbuttons,
-.kontakt{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:25px;
-
-    flex-wrap:wrap;
-
-}
-
-.kontakt{
-
-    margin-top:25px;
-
-}
-
-.button-ebay,
-.button-brickowl,
-.kontakt-button{
-
-    flex:1;
-
-    min-width:280px;
-
-    max-width:340px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:18px 24px;
-
-    border-radius:12px;
-
-    text-decoration:none;
-
-    font-size:22px;
-
-    font-weight:bold;
-
-    transition:all .25s ease;
-
 }
 
 /* ===================================================
    Shopbuttons
 =================================================== */
 
+.shopbuttons{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
+
+}
+
 .button-ebay,
 .button-brickowl{
 
-    background:#2a2a2a;
+    flex:1;
+    min-width:280px;
+    max-width:340px;
 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:18px 24px;
+
+    background:#2a2a2a;
     color:#ffffff;
 
     border:2px solid #f58220;
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-size:22px;
+    font-weight:bold;
+
+    transition:all .25s ease;
 
 }
 
@@ -122,7 +92,6 @@ main{
 .button-brickowl:hover{
 
     background:#f58220;
-
     color:#ffffff;
 
     transform:translateY(-4px);
@@ -132,23 +101,60 @@ main{
 }
 
 /* ===================================================
-   WhatsApp
+   Kontakt
 =================================================== */
+
+.kontakt{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin:18px auto 10px;
+
+}
+
+.kontakt-button{
+
+    flex:1;
+    min-width:280px;
+    max-width:340px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:18px 24px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    font-size:22px;
+    font-weight:bold;
+
+    transition:all .25s ease;
+
+}
+
+/* WhatsApp */
 
 .whatsapp{
 
     background:#25D366;
-
     border:2px solid #25D366;
-
-    color:#ffffff;
 
 }
 
 .whatsapp:hover{
 
     background:#1EBE5D;
-
     border-color:#1EBE5D;
 
     transform:translateY(-4px);
@@ -157,24 +163,18 @@ main{
 
 }
 
-/* ===================================================
-   E-Mail
-=================================================== */
+/* E-Mail */
 
 .email{
 
     background:#f58220;
-
     border:2px solid #f58220;
-
-    color:#ffffff;
 
 }
 
 .email:hover{
 
     background:#d96f15;
-
     border-color:#d96f15;
 
     transform:translateY(-4px);
@@ -241,7 +241,6 @@ footer a:hover{
     .kontakt-button{
 
         width:100%;
-
         max-width:420px;
 
     }
