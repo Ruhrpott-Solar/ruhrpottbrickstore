@@ -1,6 +1,6 @@
 /* ===================================================
    Ruhrpott Brick Store - Landingpage
-   Version 3.1
+   Version 4.0
 =================================================== */
 
 *{
@@ -81,17 +81,7 @@ main{
     font-size:22px;
     font-weight:bold;
 
-    transition:.25s;
-}
-
-.button-ebay::before{
-    content:"🛒";
-    margin-right:10px;
-}
-
-.button-brickowl::before{
-    content:"🧱";
-    margin-right:10px;
+    transition:all .25s ease;
 }
 
 .button-ebay:hover,
@@ -121,32 +111,35 @@ main{
 
     gap:25px;
 
-    flex-wrap:wrap;
-
     margin:35px auto 10px;
+
+    flex-wrap:wrap;
 
 }
 
-.kontakt-button,
-.kontakt-ort{
+.kontakt-button{
 
-    width:210px;
-    height:58px;
+    width:260px;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
-    background:#2a2a2a;
-
-    color:#ffffff;
+    padding:16px 24px;
 
     border-radius:12px;
 
     text-decoration:none;
 
-    font-size:20px;
+    color:#ffffff;
+
+    font-size:21px;
+
     font-weight:bold;
+
+    background:#2a2a2a;
 
     transition:all .25s ease;
 
@@ -181,12 +174,6 @@ main{
     color:#ffffff;
 
     transform:translateY(-3px);
-
-}
-
-.kontakt-ort{
-
-    border:2px solid #666666;
 
 }
 
@@ -252,6 +239,7 @@ footer a:hover{
     .button-brickowl{
 
         width:100%;
+
         max-width:420px;
 
     }
@@ -264,10 +252,10 @@ footer a:hover{
 
     }
 
-    .kontakt-button,
-    .kontakt-ort{
+    .kontakt-button{
 
         width:100%;
+
         max-width:420px;
 
     }
