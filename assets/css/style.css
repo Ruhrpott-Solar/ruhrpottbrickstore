@@ -1,6 +1,6 @@
 /* ===================================================
    Ruhrpott Brick Store - Landingpage
-   Version 3.0
+   Version 3.1
 =================================================== */
 
 *{
@@ -99,6 +99,8 @@ main{
 
     background:#f58220;
 
+    color:#ffffff;
+
     transform:translateY(-4px);
 
     box-shadow:0 10px 30px rgba(245,130,32,.35);
@@ -117,42 +119,42 @@ main{
 
     align-items:center;
 
-    gap:18px;
+    gap:25px;
 
     flex-wrap:wrap;
 
-    margin:35px 0 10px;
+    margin:35px auto 10px;
 
 }
 
 .kontakt-button,
 .kontakt-ort{
 
+    width:210px;
+    height:58px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
     background:#2a2a2a;
-
-    border:2px solid #555;
-
-    border-radius:10px;
 
     color:#ffffff;
 
+    border-radius:12px;
+
     text-decoration:none;
 
+    font-size:20px;
     font-weight:bold;
 
-    padding:14px 24px;
-
-    min-width:200px;
-
-    text-align:center;
-
-    transition:.25s;
+    transition:all .25s ease;
 
 }
 
 .whatsapp{
 
-    border-color:#25D366;
+    border:2px solid #25D366;
 
 }
 
@@ -162,11 +164,13 @@ main{
 
     color:#ffffff;
 
+    transform:translateY(-3px);
+
 }
 
 .email{
 
-    border-color:#f58220;
+    border:2px solid #f58220;
 
 }
 
@@ -174,11 +178,15 @@ main{
 
     background:#f58220;
 
+    color:#ffffff;
+
+    transform:translateY(-3px);
+
 }
 
 .kontakt-ort{
 
-    border-color:#666;
+    border:2px solid #666666;
 
 }
 
@@ -228,6 +236,12 @@ footer a:hover{
 
 @media (max-width:900px){
 
+    .hero-banner{
+
+        padding:8px;
+
+    }
+
     .shopbuttons{
 
         flex-direction:column;
@@ -238,7 +252,6 @@ footer a:hover{
     .button-brickowl{
 
         width:100%;
-
         max-width:420px;
 
     }
@@ -247,13 +260,14 @@ footer a:hover{
 
         flex-direction:column;
 
+        gap:15px;
+
     }
 
     .kontakt-button,
     .kontakt-ort{
 
         width:100%;
-
         max-width:420px;
 
     }
