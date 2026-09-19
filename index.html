@@ -13,81 +13,475 @@
 
     <meta name="theme-color" content="#f58220">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background:
+                radial-gradient(circle at 50% 0%, #3a3a3a 0%, #171717 45%, #080808 100%);
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero-banner {
+            width: 100%;
+            max-width: 1500px;
+            margin: 25px auto 0;
+            padding: 0 20px;
+        }
+
+        .bannerbild {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            border: 3px solid #ff8a00;
+
+            box-shadow:
+                0 0 12px rgba(255, 138, 0, 0.8),
+                0 0 35px rgba(255, 100, 0, 0.45),
+                0 20px 60px rgba(0, 0, 0, 0.7);
+
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+        .bannerbild:hover {
+            transform: scale(1.008);
+
+            box-shadow:
+                0 0 18px rgba(255, 138, 0, 1),
+                0 0 55px rgba(255, 80, 0, 0.65),
+                0 25px 70px rgba(0, 0, 0, 0.8);
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 35px 20px 30px;
+        }
+
+        /* =========================
+           SHOP BUTTONS
+        ========================= */
+
+        .shopbuttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .shopbuttons a,
+        .kontakt-button {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 82px;
+            padding: 18px 25px;
+
+            border-radius: 18px;
+
+            text-decoration: none;
+            color: #ffffff;
+
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+
+            border: 2px solid rgba(255,255,255,0.75);
+
+            overflow: hidden;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                filter 0.25s ease;
+        }
+
+        .shopbuttons a::before,
+        .kontakt-button::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: -120%;
+
+            width: 70%;
+            height: 100%;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.35),
+                transparent
+            );
+
+            transform: skewX(-20deg);
+
+            transition: left 0.6s ease;
+        }
+
+        .shopbuttons a:hover::before,
+        .kontakt-button:hover::before {
+            left: 140%;
+        }
+
+        .shopbuttons a:hover,
+        .kontakt-button:hover {
+            transform: translateY(-5px) scale(1.02);
+            filter: brightness(1.15);
+        }
+
+        /* eBay */
+
+        .button-ebay {
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff0808 0%,
+                    #e52b00 45%,
+                    #ff5b00 100%
+                );
+
+            box-shadow:
+                0 0 10px rgba(255, 30, 0, 0.9),
+                0 0 30px rgba(255, 40, 0, 0.55);
+        }
+
+        .button-ebay:hover {
+            box-shadow:
+                0 0 15px rgba(255, 40, 0, 1),
+                0 0 40px rgba(255, 40, 0, 0.85),
+                0 0 70px rgba(255, 40, 0, 0.55);
+        }
+
+        /* BrickOwl */
+
+        .button-brickowl {
+            background:
+                linear-gradient(
+                    135deg,
+                    #0077ff 0%,
+                    #004ee8 50%,
+                    #00a6ff 100%
+                );
+
+            box-shadow:
+                0 0 10px rgba(0, 130, 255, 0.9),
+                0 0 30px rgba(0, 100, 255, 0.55);
+        }
+
+        .button-brickowl:hover {
+            box-shadow:
+                0 0 15px rgba(0, 150, 255, 1),
+                0 0 40px rgba(0, 130, 255, 0.85),
+                0 0 70px rgba(0, 100, 255, 0.55);
+        }
+
+        /* =========================
+           KONTAKT
+        ========================= */
+
+        .kontakt {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .kontakt-button {
+            min-height: 75px;
+            font-size: 23px;
+        }
+
+        /* WhatsApp */
+
+        .whatsapp {
+            background:
+                linear-gradient(
+                    135deg,
+                    #00d63f 0%,
+                    #00b938 50%,
+                    #19ef62 100%
+                );
+
+            box-shadow:
+                0 0 10px rgba(0, 255, 80, 0.9),
+                0 0 30px rgba(0, 220, 70, 0.55);
+        }
+
+        .whatsapp:hover {
+            box-shadow:
+                0 0 15px rgba(0, 255, 90, 1),
+                0 0 40px rgba(0, 255, 90, 0.85),
+                0 0 70px rgba(0, 220, 70, 0.55);
+        }
+
+        /* E-Mail */
+
+        .email {
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff8a00 0%,
+                    #ff6200 50%,
+                    #ffc400 100%
+                );
+
+            box-shadow:
+                0 0 10px rgba(255, 130, 0, 0.9),
+                0 0 30px rgba(255, 100, 0, 0.55);
+        }
+
+        .email:hover {
+            box-shadow:
+                0 0 15px rgba(255, 150, 0, 1),
+                0 0 40px rgba(255, 120, 0, 0.85),
+                0 0 70px rgba(255, 100, 0, 0.55);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            width: 100%;
+            margin-top: 20px;
+            padding: 30px 20px 40px;
+
+            text-align: center;
+
+            border-top: 2px solid rgba(255, 138, 0, 0.7);
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(20,20,20,0.8),
+                    #080808
+                );
+
+            box-shadow:
+                0 -10px 35px rgba(0,0,0,0.4);
+        }
+
+        footer p {
+            margin: 0 0 12px;
+
+            font-size: 16px;
+            color: #bbbbbb;
+        }
+
+        footer nav {
+            font-size: 15px;
+        }
+
+        footer a {
+            color: #ff8a00;
+            text-decoration: none;
+            font-weight: 700;
+
+            transition:
+                color 0.2s ease,
+                text-shadow 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+
+            text-shadow:
+                0 0 8px #ff8a00,
+                0 0 18px #ff8a00;
+        }
+
+        footer span {
+            color: #666666;
+            margin: 0 8px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .hero-banner {
+                margin-top: 10px;
+                padding: 0 8px;
+            }
+
+            .bannerbild {
+                border-radius: 16px;
+                border-width: 2px;
+            }
+
+            main {
+                padding: 22px 12px 25px;
+            }
+
+            .shopbuttons,
+            .kontakt {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .shopbuttons a,
+            .kontakt-button {
+                min-height: 65px;
+                font-size: 18px;
+                border-radius: 14px;
+            }
+
+            footer {
+                padding: 25px 15px 30px;
+            }
+        }
+
+        /* =========================
+           SMALL PHONES
+        ========================= */
+
+        @media (max-width: 420px) {
+
+            .shopbuttons a,
+            .kontakt-button {
+                font-size: 16px;
+                min-height: 60px;
+            }
+
+            footer p {
+                font-size: 14px;
+            }
+
+            footer nav {
+                font-size: 13px;
+            }
+        }
+
+    </style>
 
 </head>
 
+
 <body>
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <header class="hero-banner">
 
-        <img src="assets/images/hero.webp"
-             alt="Ruhrpott Brick Store"
-             class="bannerbild">
+        <img
+            src="assets/images/hero.webp"
+            alt="Ruhrpott Brick Store – Klemmbausteine, Modelle und mehr"
+            class="bannerbild"
+        >
 
     </header>
 
+
     <main>
 
-        <!-- Shopbuttons -->
+        <!-- =========================
+             SHOP
+        ========================= -->
 
         <section class="shopbuttons">
 
-            <a class="button-ebay"
-               href="https://www.ebay.de/usr/ruhrpott-brick-store"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                📦 Zum eBay-Shop
-
+            <a
+                class="button-ebay"
+                href="https://www.ebay.de/usr/ruhrpott-brick-store"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                📦 &nbsp; Zum eBay-Shop
             </a>
 
-            <a class="button-brickowl"
-               href="https://ruhrpottbrickstore.brickowl.com/"
-               target="_blank"
-               rel="noopener noreferrer">
 
-                🧱 Zum BrickOwl-Shop
-
+            <a
+                class="button-brickowl"
+                href="https://ruhrpottbrickstore.brickowl.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                🧱 &nbsp; Zum BrickOwl-Shop
             </a>
 
         </section>
 
-        <!-- Kontakt -->
+
+        <!-- =========================
+             KONTAKT
+        ========================= -->
 
         <section class="kontakt">
 
-            <a class="kontakt-button whatsapp"
-               href="https://wa.me/491633780217"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                💬 WhatsApp
-
+            <a
+                class="kontakt-button whatsapp"
+                href="https://wa.me/491633780217"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                💬 &nbsp; WhatsApp
             </a>
 
-            <a class="kontakt-button email"
-               href="mailto:info@ruhrpottbrickstore.de">
 
-                ✉️ E-Mail
-
+            <a
+                class="kontakt-button email"
+                href="mailto:info@ruhrpottbrickstore.de"
+            >
+                ✉️ &nbsp; E-Mail
             </a>
 
         </section>
 
     </main>
 
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer>
 
-        <p>© Ruhrpott Brick Store</p>
+        <p>
+            © Ruhrpott Brick Store
+        </p>
 
         <nav>
 
-            <a href="impressum.html">Impressum</a>
+            <a href="impressum.html">
+                Impressum
+            </a>
 
-            <span> | </span>
+            <span>|</span>
 
-            <a href="datenschutz.html">Datenschutz</a>
+            <a href="datenschutz.html">
+                Datenschutz
+            </a>
 
         </nav>
 
