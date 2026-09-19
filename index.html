@@ -4,26 +4,39 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ruhrpott Brick Store | Klemmbausteine & Modelle</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Ruhrpott Brick Store | Klemmbausteine & Modelle
+    </title>
 
     <meta name="description"
           content="Gebrauchte und neue Klemmbausteine, Modelle und Ersatzteile. Besuche unseren eBay-Shop oder BrickOwl-Shop.">
 
-    <meta name="theme-color" content="#f58220">
+    <meta name="theme-color"
+          content="#f58220">
+
 
     <style>
+
+        /* =========================================
+           GRUNDLAYOUT
+        ========================================= */
 
         * {
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
+
             margin: 0;
             padding: 0;
 
@@ -31,7 +44,7 @@
                 radial-gradient(
                     circle at top,
                     #3a3a3a 0%,
-                    #181818 45%,
+                    #191919 45%,
                     #080808 100%
                 );
 
@@ -44,73 +57,89 @@
         }
 
 
+
         /* =========================================
            HERO
         ========================================= */
 
         .hero {
+
             width: 100%;
-            max-width: 1350px;
 
-            margin: 25px auto 0;
+            max-width: 1100px;
 
-            padding: 0 15px;
+            margin: 20px auto 0;
+
+            padding: 0 12px;
         }
 
 
         .hero-inner {
+
             position: relative;
 
             width: 100%;
 
             overflow: hidden;
 
-            border-radius: 24px;
+            border-radius: 20px;
 
-            border: 3px solid #ff8a00;
+            border: 2px solid #ff8a00;
+
+            background: #111111;
 
             box-shadow:
-                0 0 15px rgba(255,138,0,0.85),
-                0 0 40px rgba(255,90,0,0.45),
-                0 25px 70px rgba(0,0,0,0.75);
+
+                0 0 12px
+                rgba(255,138,0,0.8),
+
+                0 0 30px
+                rgba(255,90,0,0.45),
+
+                0 18px 50px
+                rgba(0,0,0,0.7);
         }
 
 
         .hero-image {
+
             display: block;
 
             width: 100%;
+
             height: auto;
 
             vertical-align: middle;
         }
 
 
+
         /* =========================================
-           KLICKBARE BUTTON-BEREICHE
+           KLICKBARE BEREICHE
         ========================================= */
 
         .hero-link {
+
             position: absolute;
 
             display: block;
 
-            border-radius: 18px;
+            z-index: 10;
+
+            border-radius: 14px;
 
             text-decoration: none;
 
-            z-index: 10;
-
             transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease,
-                background 0.25s ease;
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
         }
 
 
         /*
-        Die Positionen orientieren sich exakt
-        an den Buttons im neuen Bild.
+        Position der vier Buttons
+        passend zum neuen Bild
         */
 
 
@@ -119,10 +148,12 @@
         .hero-ebay {
 
             left: 4.5%;
-            top: 68.0%;
 
-            width: 44.5%;
-            height: 9.8%;
+            top: 68%;
+
+            width: 45%;
+
+            height: 9.5%;
         }
 
 
@@ -131,10 +162,12 @@
         .hero-brickowl {
 
             left: 50.8%;
-            top: 68.0%;
+
+            top: 68%;
 
             width: 44.5%;
-            height: 9.8%;
+
+            height: 9.5%;
         }
 
 
@@ -143,10 +176,12 @@
         .hero-whatsapp {
 
             left: 4.5%;
-            top: 79.0%;
 
-            width: 44.5%;
-            height: 9.8%;
+            top: 79%;
+
+            width: 45%;
+
+            height: 9.5%;
         }
 
 
@@ -155,43 +190,39 @@
         .hero-email {
 
             left: 50.8%;
-            top: 79.0%;
+
+            top: 79%;
 
             width: 44.5%;
-            height: 9.8%;
+
+            height: 9.5%;
         }
 
-
-        /* =========================================
-           HOVER-EFFEKT
-        ========================================= */
 
         .hero-link:hover {
 
             transform:
-                translateY(-3px)
                 scale(1.015);
 
             background:
                 rgba(255,255,255,0.08);
 
             box-shadow:
-                inset 0 0 12px rgba(255,255,255,0.35),
-                0 0 18px rgba(255,255,255,0.5);
+
+                inset 0 0 10px
+                rgba(255,255,255,0.3),
+
+                0 0 15px
+                rgba(255,255,255,0.4);
         }
 
 
         .hero-link:active {
 
             transform:
-                translateY(0)
                 scale(0.99);
         }
 
-
-        /* =========================================
-           HILFSTEXT FÜR BARRIEREFREIHEIT
-        ========================================= */
 
         .hero-link span {
 
@@ -213,24 +244,27 @@
         }
 
 
+
         /* =========================================
-           MAIN
+           HAUPTBEREICH
         ========================================= */
 
         main {
 
             width: 100%;
 
-            max-width: 1200px;
+            max-width: 1000px;
 
             margin: 0 auto;
 
-            padding: 25px 20px 30px;
+            padding:
+                20px 15px 25px;
         }
 
 
+
         /* =========================================
-           INFO-BEREICH
+           INFOBOXEN
         ========================================= */
 
         .info {
@@ -240,7 +274,7 @@
             grid-template-columns:
                 repeat(3, 1fr);
 
-            gap: 18px;
+            gap: 16px;
 
             margin-top: 5px;
         }
@@ -248,41 +282,43 @@
 
         .info-box {
 
-            padding: 18px;
+            padding: 16px;
 
             text-align: center;
 
-            border-radius: 15px;
+            border-radius: 14px;
 
-            border: 1px solid
+            border:
+                1px solid
                 rgba(255,138,0,0.5);
 
             background:
+
                 linear-gradient(
                     135deg,
                     rgba(35,35,35,0.95),
-                    rgba(15,15,15,0.95)
+                    rgba(12,12,12,0.95)
                 );
 
             box-shadow:
-                0 0 15px
+
+                0 0 12px
                 rgba(255,138,0,0.12);
 
-            color: #ffffff;
-
             transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
 
         .info-box:hover {
 
             transform:
-                translateY(-4px);
+                translateY(-3px);
 
             box-shadow:
-                0 0 20px
+
+                0 0 18px
                 rgba(255,138,0,0.35);
         }
 
@@ -291,15 +327,15 @@
 
             display: block;
 
-            margin-bottom: 8px;
+            margin-bottom: 6px;
 
-            font-size: 30px;
+            font-size: 26px;
         }
 
 
         .info-title {
 
-            font-size: 17px;
+            font-size: 16px;
 
             font-weight: 800;
 
@@ -311,10 +347,11 @@
 
             margin-top: 5px;
 
-            font-size: 14px;
+            font-size: 13px;
 
             color: #cccccc;
         }
+
 
 
         /* =========================================
@@ -325,9 +362,10 @@
 
             width: 100%;
 
-            margin-top: 15px;
+            margin-top: 10px;
 
-            padding: 30px 20px 40px;
+            padding:
+                25px 15px 30px;
 
             text-align: center;
 
@@ -336,6 +374,7 @@
                 rgba(255,138,0,0.7);
 
             background:
+
                 linear-gradient(
                     180deg,
                     rgba(20,20,20,0.95),
@@ -343,25 +382,26 @@
                 );
 
             box-shadow:
-                0 -10px 35px
-                rgba(0,0,0,0.45);
+
+                0 -8px 25px
+                rgba(0,0,0,0.4);
         }
 
 
         footer p {
 
             margin:
-                0 0 12px;
+                0 0 10px;
 
             color: #aaaaaa;
 
-            font-size: 15px;
+            font-size: 14px;
         }
 
 
         footer nav {
 
-            font-size: 15px;
+            font-size: 14px;
         }
 
 
@@ -384,18 +424,23 @@
             color: #ffffff;
 
             text-shadow:
-                0 0 8px #ff8a00,
-                0 0 18px #ff8a00;
+
+                0 0 7px
+                #ff8a00,
+
+                0 0 15px
+                #ff8a00;
         }
 
 
         footer span {
 
             margin:
-                0 8px;
+                0 7px;
 
             color: #666666;
         }
+
 
 
         /* =========================================
@@ -415,9 +460,7 @@
 
             .hero-inner {
 
-                border-radius: 17px;
-
-                border-width: 2px;
+                border-radius: 16px;
             }
 
 
@@ -429,6 +472,7 @@
         }
 
 
+
         /* =========================================
            HANDY
         ========================================= */
@@ -437,27 +481,23 @@
 
             .hero {
 
-                padding: 0 5px;
+                padding:
+                    0 5px;
             }
 
 
             .hero-inner {
 
-                border-radius: 13px;
+                border-radius: 12px;
             }
 
-
-            /*
-            Auf kleinen Displays werden die
-            klickbaren Bereiche etwas großzügiger.
-            */
 
             .hero-ebay,
             .hero-brickowl {
 
                 top: 67.5%;
 
-                height: 10.5%;
+                height: 10%;
             }
 
 
@@ -466,21 +506,27 @@
 
                 top: 78.5%;
 
-                height: 10.5%;
+                height: 10%;
             }
 
 
             main {
 
                 padding:
-                    15px 10px 25px;
+                    15px 10px 20px;
+            }
+
+
+            .info-box {
+
+                padding: 14px;
             }
 
 
             footer {
 
                 padding:
-                    25px 10px 30px;
+                    22px 10px 28px;
             }
 
 
@@ -489,6 +535,8 @@
                 font-size: 13px;
             }
         }
+
+
 
     </style>
 
@@ -506,6 +554,7 @@
 
         <div class="hero-inner">
 
+
             <img
                 src="assets/images/hero.webp"
                 alt="Ruhrpott Brick Store – Klemmbausteine, Modelle und mehr"
@@ -513,58 +562,102 @@
             >
 
 
-            <!-- eBay -->
+
+            <!-- =================================
+                 EBAY
+            ================================= -->
 
             <a
                 class="hero-link hero-ebay"
+
                 href="https://www.ebay.de/usr/ruhrpott-brick-store"
+
                 target="_blank"
+
                 rel="noopener noreferrer"
+
                 aria-label="Zum eBay-Shop"
             >
-                <span>Zum eBay-Shop</span>
+
+                <span>
+                    Zum eBay-Shop
+                </span>
+
             </a>
 
 
-            <!-- BrickOwl -->
+
+            <!-- =================================
+                 BRICKOWL
+            ================================= -->
 
             <a
                 class="hero-link hero-brickowl"
+
                 href="https://ruhrpottbrickstore.brickowl.com/"
+
                 target="_blank"
+
                 rel="noopener noreferrer"
+
                 aria-label="Zum BrickOwl-Shop"
             >
-                <span>Zum BrickOwl-Shop</span>
+
+                <span>
+                    Zum BrickOwl-Shop
+                </span>
+
             </a>
 
 
-            <!-- WhatsApp -->
+
+            <!-- =================================
+                 WHATSAPP
+            ================================= -->
 
             <a
                 class="hero-link hero-whatsapp"
+
                 href="https://wa.me/491633780217"
+
                 target="_blank"
+
                 rel="noopener noreferrer"
+
                 aria-label="Kontakt über WhatsApp"
             >
-                <span>WhatsApp</span>
+
+                <span>
+                    WhatsApp
+                </span>
+
             </a>
 
 
-            <!-- E-Mail -->
+
+            <!-- =================================
+                 E-MAIL
+            ================================= -->
 
             <a
                 class="hero-link hero-email"
+
                 href="mailto:info@ruhrpottbrickstore.de"
+
                 aria-label="E-Mail schreiben"
             >
-                <span>E-Mail</span>
+
+                <span>
+                    E-Mail
+                </span>
+
             </a>
+
 
         </div>
 
     </header>
+
 
 
     <!-- =========================================
@@ -573,12 +666,15 @@
 
     <main>
 
+
         <section class="info">
 
 
             <div class="info-box">
 
-                <span class="info-icon">🚚</span>
+                <span class="info-icon">
+                    🚚
+                </span>
 
                 <div class="info-title">
                     Schneller Versand
@@ -591,9 +687,12 @@
             </div>
 
 
+
             <div class="info-box">
 
-                <span class="info-icon">🛡️</span>
+                <span class="info-icon">
+                    🛡️
+                </span>
 
                 <div class="info-title">
                     Sicher bezahlen
@@ -606,9 +705,12 @@
             </div>
 
 
+
             <div class="info-box">
 
-                <span class="info-icon">🧱</span>
+                <span class="info-icon">
+                    🧱
+                </span>
 
                 <div class="info-title">
                     Für Baufans
@@ -623,7 +725,9 @@
 
         </section>
 
+
     </main>
+
 
 
     <!-- =========================================
@@ -631,6 +735,7 @@
     ========================================= -->
 
     <footer>
+
 
         <p>
             © Ruhrpott Brick Store
@@ -650,6 +755,7 @@
             </a>
 
         </nav>
+
 
     </footer>
 
